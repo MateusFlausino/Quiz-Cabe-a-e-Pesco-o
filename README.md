@@ -10,6 +10,7 @@ Abra `index.html` no navegador.
 - `Quiz`: selecione um pino, digite a estrutura física e confira a resposta.
 - `Estudo`: veja os nomes cadastrados sobre a lâmina.
 - `Zoom`: aumente a imagem para estruturas pequenas; os pinos ficam menores conforme o zoom aumenta.
+- As respostas aceitam caixa alta/baixa, acentos e variações simples de singular/plural.
 - `Exportar` e `Importar`: salva ou carrega os pinos e máscaras em JSON.
 
 Os dados ficam salvos no `localStorage` do navegador e também podem ser exportados.

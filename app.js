@@ -116,8 +116,44 @@ function normalizeAnswer(value) {
     .trim();
 }
 
+function singularizeToken(token) {
+  if (token.length > 4 && token.endsWith("ais")) return `${token.slice(0, -3)}al`;
+  if (token.length > 4 && token.endsWith("eis")) return `${token.slice(0, -3)}el`;
+  if (token.length > 4 && token.endsWith("oes")) return `${token.slice(0, -3)}ao`;
+  if (token.length > 3 && token.endsWith("s")) return token.slice(0, -1);
+  return token;
+}
+
+function answerForms(value) {
+  const base = normalizeAnswer(value);
+  const forms = new Set();
+  if (!base) return forms;
+
+  const optionalWords = new Set(["a", "as", "o", "os", "de", "da", "das", "do", "dos", "osso", "ossos"]);
+  const tokens = base.split(" ").filter(Boolean);
+  const compactTokens = tokens.filter((token) => !optionalWords.has(token));
+  const singularTokens = tokens.map(singularizeToken);
+  const compactSingularTokens = compactTokens.map(singularizeToken);
+
+  forms.add(base);
+  forms.add(singularTokens.join(" "));
+  if (compactTokens.length) forms.add(compactTokens.join(" "));
+  if (compactSingularTokens.length) forms.add(compactSingularTokens.join(" "));
+
+  return forms;
+}
+
 function acceptedAnswers(pin) {
-  return [pin.label, ...(pin.aliases || [])].map(normalizeAnswer).filter(Boolean);
+  return [pin.label, ...(pin.aliases || [])].reduce((forms, value) => {
+    answerForms(value).forEach((form) => forms.add(form));
+    return forms;
+  }, new Set());
+}
+
+function isAnswerCorrect(answer, pin) {
+  const answerOptions = answerForms(answer);
+  const accepted = acceptedAnswers(pin);
+  return [...answerOptions].some((option) => accepted.has(option));
 }
 
 function uid(prefix) {
@@ -459,9 +495,7 @@ function commitMask() {
 function checkAnswer() {
   const pin = activeQuizPin();
   if (!pin) return;
-  const answer = normalizeAnswer(els.answerInput.value);
-  const accepted = acceptedAnswers(pin);
-  const isCorrect = accepted.includes(answer);
+  const isCorrect = isAnswerCorrect(els.answerInput.value, pin);
   state.checkedPins.set(pin.id, isCorrect);
 
   if (isCorrect) {
