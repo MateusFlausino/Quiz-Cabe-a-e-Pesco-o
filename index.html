@@ -25,10 +25,22 @@
 
     <main class="app-shell">
       <section class="image-panel" aria-label="Imagem anatômica">
-        <div class="mode-tabs" role="tablist" aria-label="Modo">
-          <button class="tab is-active" type="button" data-mode="quiz">Quiz</button>
-          <button class="tab" type="button" data-mode="edit">Editar</button>
-          <button class="tab" type="button" data-mode="study">Estudo</button>
+        <div class="image-controls">
+          <div class="mode-tabs" role="tablist" aria-label="Modo">
+            <button class="tab is-active" type="button" data-mode="quiz">Quiz</button>
+            <button class="tab" type="button" data-mode="edit">Editar</button>
+            <button class="tab" type="button" data-mode="study">Estudo</button>
+          </div>
+
+          <div class="zoom-controls" aria-label="Zoom da imagem">
+            <button class="icon-button compact-icon" id="zoomOut" type="button" title="Diminuir zoom" aria-label="Diminuir zoom">−</button>
+            <label class="zoom-slider">
+              <span>Zoom</span>
+              <input id="zoomRange" type="range" min="1" max="3" step="0.1" value="1" />
+            </label>
+            <button class="icon-button compact-icon" id="zoomIn" type="button" title="Aumentar zoom" aria-label="Aumentar zoom">+</button>
+            <button class="zoom-value" id="resetZoom" type="button" title="Redefinir zoom">100%</button>
+          </div>
         </div>
 
         <div class="stage-frame">

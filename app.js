@@ -1,5 +1,8 @@
 const SLIDE_COUNT = 13;
 const STORAGE_KEY = "cabeca-pescoco-quiz-v1";
+const MIN_ZOOM = 1;
+const MAX_ZOOM = 3;
+const ZOOM_STEP = 0.1;
 
 const slides = Array.from({ length: SLIDE_COUNT }, (_, index) => ({
   title: `Lâmina ${index + 1}`,
@@ -13,6 +16,10 @@ const els = {
   slideImage: document.querySelector("#slideImage"),
   overlay: document.querySelector("#overlay"),
   imageStage: document.querySelector("#imageStage"),
+  zoomOut: document.querySelector("#zoomOut"),
+  zoomIn: document.querySelector("#zoomIn"),
+  zoomRange: document.querySelector("#zoomRange"),
+  resetZoom: document.querySelector("#resetZoom"),
   tabs: document.querySelectorAll(".tab"),
   quizPanel: document.querySelector("#quizPanel"),
   editPanel: document.querySelector("#editPanel"),
@@ -45,6 +52,7 @@ const state = {
   checkedPins: new Map(),
   draftMask: null,
   dragPinId: null,
+  zoom: 1,
 };
 
 let data = loadData();
@@ -141,6 +149,23 @@ function setSlide(index) {
 function setTool(tool) {
   state.tool = tool;
   els.toolButtons.forEach((button) => button.classList.toggle("is-active", button.dataset.tool === tool));
+}
+
+function setZoom(value) {
+  const roundedValue = Math.round(Number(value) * 10) / 10;
+  state.zoom = Math.min(MAX_ZOOM, Math.max(MIN_ZOOM, roundedValue));
+  applyZoom();
+}
+
+function applyZoom() {
+  const zoom = state.zoom;
+  const pinSize = Math.max(12, Math.round(22 / Math.sqrt(zoom)));
+  const pinFontSize = Math.max(7, Math.round(pinSize * 0.46));
+  els.imageStage.style.width = `min(${Math.round(1050 * zoom)}px, ${Math.round(100 * zoom)}%)`;
+  els.imageStage.style.setProperty("--pin-size", `${pinSize}px`);
+  els.imageStage.style.setProperty("--pin-font-size", `${pinFontSize}px`);
+  els.zoomRange.value = String(zoom);
+  els.resetZoom.textContent = `${Math.round(zoom * 100)}%`;
 }
 
 function pointFromEvent(event) {
@@ -540,6 +565,10 @@ function init() {
   els.slideSelect.addEventListener("change", () => setSlide(Number(els.slideSelect.value)));
   els.prevSlide.addEventListener("click", () => setSlide(state.slideIndex - 1));
   els.nextSlide.addEventListener("click", () => setSlide(state.slideIndex + 1));
+  els.zoomOut.addEventListener("click", () => setZoom(state.zoom - ZOOM_STEP));
+  els.zoomIn.addEventListener("click", () => setZoom(state.zoom + ZOOM_STEP));
+  els.zoomRange.addEventListener("input", () => setZoom(els.zoomRange.value));
+  els.resetZoom.addEventListener("click", () => setZoom(1));
   els.checkAnswer.addEventListener("click", checkAnswer);
   els.nextQuestion.addEventListener("click", nextQuestion);
   els.revealAnswer.addEventListener("click", revealAnswer);
@@ -571,6 +600,7 @@ function init() {
   });
 
   els.slideImage.addEventListener("load", render);
+  applyZoom();
   setSlide(0);
 }
 
