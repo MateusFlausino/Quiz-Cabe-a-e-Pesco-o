@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Quiz Cabeça e Pescoço</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">Anatomia</p>
+        <h1>Quiz Cabeça e Pescoço</h1>
+      </div>
+
+      <div class="toolbar">
+        <button class="icon-button" id="prevSlide" type="button" title="Lâmina anterior" aria-label="Lâmina anterior">‹</button>
+        <label class="slide-picker">
+          <span>Lâmina</span>
+          <select id="slideSelect" aria-label="Selecionar lâmina"></select>
+        </label>
+        <button class="icon-button" id="nextSlide" type="button" title="Próxima lâmina" aria-label="Próxima lâmina">›</button>
+      </div>
+    </header>
+
+    <main class="app-shell">
+      <section class="image-panel" aria-label="Imagem anatômica">
+        <div class="mode-tabs" role="tablist" aria-label="Modo">
+          <button class="tab is-active" type="button" data-mode="quiz">Quiz</button>
+          <button class="tab" type="button" data-mode="edit">Editar</button>
+          <button class="tab" type="button" data-mode="study">Estudo</button>
+        </div>
+
+        <div class="stage-frame">
+          <div class="image-stage" id="imageStage">
+            <img id="slideImage" alt="Lâmina anatômica" draggable="false" />
+            <div class="overlay" id="overlay"></div>
+          </div>
+        </div>
+      </section>
+
+      <aside class="side-panel">
+        <section class="panel-section" id="quizPanel">
+          <div class="panel-heading">
+            <p class="eyebrow">Responder</p>
+            <h2 id="quizTitle">Pino ativo</h2>
+          </div>
+
+          <div class="score-strip">
+            <span id="progressText">0/0</span>
+            <strong id="scoreText">0 acertos</strong>
+          </div>
+
+          <label class="field">
+            <span>Estrutura física</span>
+            <input id="answerInput" type="text" autocomplete="off" placeholder="Digite a estrutura" />
+          </label>
+
+          <div class="actions">
+            <button class="primary" id="checkAnswer" type="button">Conferir</button>
+            <button id="nextQuestion" type="button">Próximo</button>
+          </div>
+
+          <p class="feedback" id="feedback" aria-live="polite"></p>
+          <button class="ghost" id="revealAnswer" type="button">Mostrar resposta</button>
+        </section>
+
+        <section class="panel-section is-hidden" id="editPanel">
+          <div class="panel-heading">
+            <p class="eyebrow">Montagem</p>
+            <h2>Pinos e máscaras</h2>
+          </div>
+
+          <div class="segmented" aria-label="Ferramenta">
+            <button class="segment is-active" type="button" data-tool="pin">Pino</button>
+            <button class="segment" type="button" data-tool="mask">Máscara</button>
+          </div>
+
+          <label class="field">
+            <span>Estrutura selecionada</span>
+            <input id="pinLabel" type="text" placeholder="Ex.: osso frontal" />
+          </label>
+
+          <label class="field">
+            <span>Alternativas aceitas</span>
+            <input id="pinAliases" type="text" placeholder="Separar por vírgula" />
+          </label>
+
+          <div class="actions">
+            <button class="primary" id="savePin" type="button">Salvar</button>
+            <button id="deleteSelected" type="button">Excluir</button>
+          </div>
+
+          <div class="actions compact">
+            <button id="exportData" type="button">Exportar</button>
+            <label class="file-button">
+              Importar
+              <input id="importData" type="file" accept="application/json" />
+            </label>
+          </div>
+
+          <div class="pin-list" id="pinList" aria-label="Pinos da lâmina"></div>
+        </section>
+
+        <section class="panel-section is-hidden" id="studyPanel">
+          <div class="panel-heading">
+            <p class="eyebrow">Revisão</p>
+            <h2>Mapa da lâmina</h2>
+          </div>
+          <div class="pin-list" id="studyList" aria-label="Estruturas da lâmina"></div>
+        </section>
+      </aside>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
