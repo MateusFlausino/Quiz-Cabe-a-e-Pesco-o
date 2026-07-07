@@ -6,10 +6,10 @@ Aplicativo web local para transformar as lâminas extraídas do PDF em um quiz i
 
 Abra `index.html` no navegador.
 
-- `Editar`: clique na imagem para criar pinos, arraste pinos para reposicionar e use máscaras para cobrir nomes ou setas da imagem.
+- `Editar`: clique na imagem para criar pinos, arraste pinos para reposicionar, use máscaras para cobrir nomes ou setas e use `Mover` para arrastar a lâmina com zoom.
 - `Quiz`: selecione um pino, digite a estrutura física e confira a resposta.
 - `Estudo`: veja os nomes cadastrados sobre a lâmina.
-- `Zoom`: aumente a imagem pelo controle ou rolando o mouse sobre a lâmina; os pinos ficam menores conforme o zoom aumenta.
+- `Zoom`: aumente a imagem pelo controle ou rolando o mouse sobre a lâmina; depois arraste a lâmina para navegar nos detalhes.
 - As respostas aceitam caixa alta/baixa, acentos e variações simples de singular/plural.
 - `Exportar` e `Importar`: salva ou carrega os pinos e máscaras em JSON.
 

@@ -53,6 +53,7 @@ const state = {
   checkedPins: new Map(),
   draftMask: null,
   dragPinId: null,
+  pan: null,
   zoom: 1,
 };
 
@@ -168,6 +169,7 @@ function setMode(mode) {
   els.editPanel.classList.toggle("is-hidden", mode !== "edit");
   els.studyPanel.classList.toggle("is-hidden", mode !== "study");
   state.selectedId = mode === "quiz" ? activeQuizPin()?.id || null : state.selectedId;
+  updateStageCursor();
   render();
 }
 
@@ -186,6 +188,7 @@ function setSlide(index) {
 function setTool(tool) {
   state.tool = tool;
   els.toolButtons.forEach((button) => button.classList.toggle("is-active", button.dataset.tool === tool));
+  updateStageCursor();
 }
 
 function setZoom(value) {
@@ -203,6 +206,43 @@ function applyZoom() {
   els.imageStage.style.setProperty("--pin-font-size", `${pinFontSize}px`);
   els.zoomRange.value = String(zoom);
   els.resetZoom.textContent = `${Math.round(zoom * 100)}%`;
+  updateStageCursor();
+}
+
+function canPanStage() {
+  return state.zoom > MIN_ZOOM && (state.mode !== "edit" || state.tool === "pan");
+}
+
+function updateStageCursor() {
+  els.stageFrame.classList.toggle("is-pannable", canPanStage() && !state.pan);
+  els.stageFrame.classList.toggle("is-panning", Boolean(state.pan));
+}
+
+function beginPan(event) {
+  if (!canPanStage()) return;
+  state.pan = {
+    pointerId: event.pointerId,
+    startX: event.clientX,
+    startY: event.clientY,
+    scrollLeft: els.stageFrame.scrollLeft,
+    scrollTop: els.stageFrame.scrollTop,
+  };
+  els.imageStage.setPointerCapture(event.pointerId);
+  updateStageCursor();
+}
+
+function updatePan(event) {
+  if (!state.pan || state.pan.pointerId !== event.pointerId) return;
+  const deltaX = event.clientX - state.pan.startX;
+  const deltaY = event.clientY - state.pan.startY;
+  els.stageFrame.scrollLeft = state.pan.scrollLeft - deltaX;
+  els.stageFrame.scrollTop = state.pan.scrollTop - deltaY;
+}
+
+function endPan(event) {
+  if (!state.pan || state.pan.pointerId !== event.pointerId) return;
+  state.pan = null;
+  updateStageCursor();
 }
 
 function zoomFromWheel(event) {
@@ -637,7 +677,13 @@ function init() {
   });
 
   els.imageStage.addEventListener("pointerdown", (event) => {
-    if (state.mode !== "edit" || event.target.closest(".pin, .mask")) return;
+    if (event.target.closest(".pin, .mask")) return;
+
+    if (state.mode !== "edit" || state.tool === "pan") {
+      beginPan(event);
+      return;
+    }
+
     const point = pointFromEvent(event);
     if (state.tool === "pin") {
       addPin(point);
@@ -648,11 +694,19 @@ function init() {
   });
 
   els.imageStage.addEventListener("pointermove", (event) => {
+    updatePan(event);
     if (state.mode === "edit" && state.draftMask) updateMask(pointFromEvent(event));
   });
 
-  els.imageStage.addEventListener("pointerup", () => {
+  els.imageStage.addEventListener("pointerup", (event) => {
+    endPan(event);
     if (state.mode === "edit" && state.draftMask) commitMask();
+  });
+
+  els.imageStage.addEventListener("pointercancel", (event) => {
+    endPan(event);
+    state.draftMask = null;
+    renderOverlay();
   });
 
   els.slideImage.addEventListener("load", render);

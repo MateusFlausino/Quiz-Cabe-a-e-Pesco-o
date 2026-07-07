@@ -221,6 +221,14 @@ input:focus {
   box-shadow: var(--shadow);
 }
 
+.stage-frame.is-pannable {
+  cursor: grab;
+}
+
+.stage-frame.is-panning {
+  cursor: grabbing;
+}
+
 .image-stage {
   position: relative;
   width: min(100%, 1050px);
@@ -375,7 +383,7 @@ input:focus {
 
 .segmented {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
   gap: 4px;
   padding: 4px;
   border: 1px solid var(--line);
