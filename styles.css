@@ -214,6 +214,9 @@ input:focus {
 
 .stage-frame {
   width: 100%;
+  height: calc(100vh - 190px);
+  min-height: 520px;
+  max-height: 1180px;
   overflow: auto;
   border: 1px solid var(--line);
   border-radius: 8px;
@@ -462,6 +465,11 @@ input:focus {
     position: static;
   }
 
+  .stage-frame {
+    height: min(76vh, 900px);
+    min-height: 420px;
+  }
+
   .image-controls {
     align-items: stretch;
     flex-direction: column;
@@ -488,6 +496,11 @@ input:focus {
 
   .actions {
     grid-template-columns: 1fr;
+  }
+
+  .stage-frame {
+    height: 68vh;
+    min-height: 360px;
   }
 
   .zoom-slider {

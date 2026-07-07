@@ -210,7 +210,11 @@ function applyZoom() {
 }
 
 function canPanStage() {
-  return state.zoom > MIN_ZOOM && (state.mode !== "edit" || state.tool === "pan");
+  const hasOverflow = (
+    els.stageFrame.scrollWidth > els.stageFrame.clientWidth ||
+    els.stageFrame.scrollHeight > els.stageFrame.clientHeight
+  );
+  return hasOverflow && (state.mode !== "edit" || state.tool === "pan");
 }
 
 function updateStageCursor() {
@@ -274,6 +278,7 @@ function pointFromEvent(event) {
 }
 
 function render() {
+  updateStageCursor();
   renderOverlay();
   renderPanels();
 }
