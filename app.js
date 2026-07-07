@@ -16,6 +16,7 @@ const els = {
   slideImage: document.querySelector("#slideImage"),
   overlay: document.querySelector("#overlay"),
   imageStage: document.querySelector("#imageStage"),
+  stageFrame: document.querySelector(".stage-frame"),
   zoomOut: document.querySelector("#zoomOut"),
   zoomIn: document.querySelector("#zoomIn"),
   zoomRange: document.querySelector("#zoomRange"),
@@ -202,6 +203,26 @@ function applyZoom() {
   els.imageStage.style.setProperty("--pin-font-size", `${pinFontSize}px`);
   els.zoomRange.value = String(zoom);
   els.resetZoom.textContent = `${Math.round(zoom * 100)}%`;
+}
+
+function zoomFromWheel(event) {
+  event.preventDefault();
+
+  const oldWidth = els.imageStage.offsetWidth || 1;
+  const oldHeight = els.imageStage.offsetHeight || 1;
+  const frameRect = els.stageFrame.getBoundingClientRect();
+  const pointerX = event.clientX - frameRect.left;
+  const pointerY = event.clientY - frameRect.top;
+  const ratioX = (els.stageFrame.scrollLeft + pointerX) / oldWidth;
+  const ratioY = (els.stageFrame.scrollTop + pointerY) / oldHeight;
+  const direction = event.deltaY < 0 ? 1 : -1;
+
+  setZoom(state.zoom + direction * ZOOM_STEP);
+
+  const newWidth = els.imageStage.offsetWidth || oldWidth;
+  const newHeight = els.imageStage.offsetHeight || oldHeight;
+  els.stageFrame.scrollLeft = ratioX * newWidth - pointerX;
+  els.stageFrame.scrollTop = ratioY * newHeight - pointerY;
 }
 
 function pointFromEvent(event) {
@@ -603,6 +624,7 @@ function init() {
   els.zoomIn.addEventListener("click", () => setZoom(state.zoom + ZOOM_STEP));
   els.zoomRange.addEventListener("input", () => setZoom(els.zoomRange.value));
   els.resetZoom.addEventListener("click", () => setZoom(1));
+  els.stageFrame.addEventListener("wheel", zoomFromWheel, { passive: false });
   els.checkAnswer.addEventListener("click", checkAnswer);
   els.nextQuestion.addEventListener("click", nextQuestion);
   els.revealAnswer.addEventListener("click", revealAnswer);
