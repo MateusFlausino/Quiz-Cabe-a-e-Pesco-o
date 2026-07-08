@@ -2,6 +2,8 @@
 
 Aplicativo web local para transformar as lâminas extraídas do PDF em um quiz interativo de anatomia.
 
+O app já carrega automaticamente os pinos, máscaras e respostas cadastrados em `data/quiz-cabeca-pescoco.json`.
+
 ## Como usar
 
 Abra `index.html` no navegador.

@@ -1,0 +1,912 @@
+{
+  "version": 1,
+  "slides": [
+    {
+      "pins": [
+        {
+          "id": "pin-mrb9jksb-o3dd3h",
+          "x": 0.422360248447205,
+          "y": 0.1367410268850178,
+          "label": "FRONTAL",
+          "aliases": [
+            "FRONTAL"
+          ]
+        },
+        {
+          "id": "pin-mrb9jlvz-8ixxad",
+          "x": 0.42194616977225674,
+          "y": 0.3288997922063656,
+          "label": "MAXILA",
+          "aliases": [
+            "MAXILA"
+          ]
+        },
+        {
+          "id": "pin-mrb9jmg7-82zt3a",
+          "x": 0.3577639751552795,
+          "y": 0.2234468112373333,
+          "label": "ETMOIDE",
+          "aliases": [
+            "ETMOIDE"
+          ]
+        },
+        {
+          "id": "pin-mrb9lfys-t0m9i9",
+          "x": 0.3064182194616977,
+          "y": 0.24600203216682076,
+          "label": "OSSOS NASAIS",
+          "aliases": [
+            "OSSOS NASAIS"
+          ]
+        },
+        {
+          "id": "pin-mrb9lgys-o73s6u",
+          "x": 0.5022774327122154,
+          "y": 0.30693042117115055,
+          "label": "ZIGOMÁTICO",
+          "aliases": [
+            "ZIGOMÁTICO"
+          ]
+        },
+        {
+          "id": "pin-mrb9lhvy-1nahcm",
+          "x": 0.35403726708074534,
+          "y": 0.24893128163818276,
+          "label": "LACRIMAL",
+          "aliases": [
+            "LACRIMAL"
+          ]
+        },
+        {
+          "id": "pin-mrb9vzl3-obafvl",
+          "x": 0.4289855072463768,
+          "y": 0.2641633788892652,
+          "label": "ESFENOIDE",
+          "aliases": [
+            "ESFENOIDE"
+          ]
+        },
+        {
+          "id": "pin-mrb9wrra-xmglkq",
+          "x": 0.1800865800865801,
+          "y": 0.5383135712440068,
+          "label": "PARIETAL",
+          "aliases": [
+            "PARIETAL"
+          ]
+        },
+        {
+          "id": "pin-mrb9x4bo-4wnxif",
+          "x": 0.8040100250626566,
+          "y": 0.5626745268383494,
+          "label": "OSSOS SUTURAIS",
+          "aliases": [
+            "OSSOS SUTURAIS"
+          ]
+        },
+        {
+          "id": "pin-mrb9xh5y-qghyl0",
+          "x": 0.7839598997493734,
+          "y": 0.6864279065644253,
+          "label": "OCCIPITAL",
+          "aliases": [
+            "OCCIPITAL"
+          ]
+        },
+        {
+          "id": "pin-mrb9xtvy-sesuq2",
+          "x": 0.24978354978354977,
+          "y": 0.6819404170614299,
+          "label": "TEMPORAL",
+          "aliases": [
+            "TEMPORAL"
+          ]
+        },
+        {
+          "id": "pin-mrb9xzx8-ai3ebg",
+          "x": 0.2683982683982684,
+          "y": 0.7242016211612261,
+          "label": "PROCESSO MASTOIDE",
+          "aliases": [
+            "PROCESSO MASTOIDE"
+          ]
+        },
+        {
+          "id": "pin-mrb9yc7e-m72unr",
+          "x": 0.3008658008658009,
+          "y": 0.7208329744576192,
+          "label": "PROCESSO ESTILOIDE",
+          "aliases": [
+            "PROCESSO ESTILOIDE"
+          ]
+        },
+        {
+          "id": "pin-mrba0h48-uj2jcq",
+          "x": 0.18311688311688312,
+          "y": 0.9054960619371633,
+          "label": "ETMOIDE",
+          "aliases": [
+            "ETMOIDE"
+          ]
+        },
+        {
+          "id": "pin-mrba0nq8-4lkppd",
+          "x": 0.19177489177489176,
+          "y": 0.9266266639870613,
+          "label": "VÔMER",
+          "aliases": [
+            "VÔMER"
+          ]
+        },
+        {
+          "id": "pin-mrba1eu8-vcs073",
+          "x": 0.5566666666666666,
+          "y": 0.8029644289579232,
+          "label": "PROCESSO PALATINO",
+          "aliases": [
+            "PROCESSO PALATINO"
+          ]
+        },
+        {
+          "id": "pin-mrba1tsp-n89r2l",
+          "x": 0.551948051948052,
+          "y": 0.8316920750672294,
+          "label": "PALATINO",
+          "aliases": [
+            "PALATINO"
+          ]
+        },
+        {
+          "id": "pin-mrba20b7-dnrsnp",
+          "x": 0.5557142857142857,
+          "y": 0.91143557946375,
+          "label": "FORAME MAGNO",
+          "aliases": [
+            "FORAME MAGNO"
+          ]
+        }
+      ],
+      "masks": [
+        {
+          "id": "mask-mrba2sac-xe4deo",
+          "x": 0.5433333333333333,
+          "y": 0.08611160822376386,
+          "w": 0.18095238095238098,
+          "h": 0.329455854641921
+        },
+        {
+          "id": "mask-mrba2wu7-jpvmg6",
+          "x": 0.7766666666666666,
+          "y": 0.45868642952638616,
+          "w": 0.15428571428571436,
+          "h": 0.02829682187108523
+        },
+        {
+          "id": "mask-mrba2yl9-oa8g96",
+          "x": 0.1357142857142857,
+          "y": 0.45397029254787197,
+          "w": 0.17238095238095238,
+          "h": 0.029644289579232153
+        },
+        {
+          "id": "mask-mrba3dzl-v1ksox",
+          "x": 0.2195238095238095,
+          "y": 0.7436758497994589,
+          "w": 0.23619047619047623,
+          "h": 0.03975029739033409
+        },
+        {
+          "id": "mask-mrba3gl3-61lash",
+          "x": 0.5938095238095238,
+          "y": 0.7234638341772551,
+          "w": 0.24095238095238103,
+          "h": 0.0552461760340236
+        },
+        {
+          "id": "mask-mrba3jxh-xiqcbz",
+          "x": 0.6576190476190477,
+          "y": 0.8016169612497763,
+          "w": 0.08285714285714285,
+          "h": 0.15967492341540956
+        },
+        {
+          "id": "mask-mrba3lhr-7vxsfs",
+          "x": 0.31476190476190474,
+          "y": 0.8487783310349184,
+          "w": 0.09142857142857147,
+          "h": 0.11183981977619395
+        }
+      ]
+    },
+    {
+      "pins": [
+        {
+          "id": "pin-mrba95g4-19jtk1",
+          "x": 0.21587301587301588,
+          "y": 0.05524924885409128,
+          "label": "ART. ATLANTOAXIAL MEDIANA",
+          "aliases": [
+            "ART. ATLANTOAXIAL MEDIANA"
+          ]
+        },
+        {
+          "id": "pin-mrba96y2-yoi5bu",
+          "x": 0.22606516290726816,
+          "y": 0.06695181951154647,
+          "label": "DENTE DO ÁXIS",
+          "aliases": [
+            "DENTE DO ÁXIS"
+          ]
+        },
+        {
+          "id": "pin-mrba993o-8rfr8f",
+          "x": 0.17343358395989975,
+          "y": 0.11446744381897965,
+          "label": "LIG. ALARES",
+          "aliases": [
+            "LIG. ALARES"
+          ]
+        },
+        {
+          "id": "pin-mrba9a4m-c2g663",
+          "x": 0.3142857142857143,
+          "y": 0.11480352788563637,
+          "label": "LIG. ALARES",
+          "aliases": [
+            "LIG. ALARES"
+          ]
+        },
+        {
+          "id": "pin-mrba9bui-upz6ks",
+          "x": 0.19398496240601504,
+          "y": 0.19212357608262046,
+          "label": "LIG. TRANSVERSO DO ATLAS",
+          "aliases": [
+            "LIG. TRANSVERSO DO ATLAS"
+          ]
+        },
+        {
+          "id": "pin-mrba9cji-dbxl3f",
+          "x": 0.33283208020050126,
+          "y": 0.18290412659013341,
+          "label": "LIG. TRANSVERSO DO ATLAS",
+          "aliases": [
+            "LIG. TRANSVERSO DO ATLAS"
+          ]
+        },
+        {
+          "id": "pin-mrba9dar-ltkm49",
+          "x": 0.2654761904761905,
+          "y": 0.23154154878610436,
+          "label": "LIG. LONGITUDINAL INFERIOR",
+          "aliases": [
+            "LIG. LONGITUDINAL INFERIOR"
+          ]
+        },
+        {
+          "id": "pin-mrba9e83-evdyq5",
+          "x": 0.24411027568922306,
+          "y": 0.2836088825849918,
+          "label": "MEMBRANA TECTÓRIA",
+          "aliases": [
+            "MEMBRANA TECTÓRIA"
+          ]
+        },
+        {
+          "id": "pin-mrba9hfw-szn9z4",
+          "x": 0.7051587301587302,
+          "y": 0.14143035726034608,
+          "label": "MEMBRANA ATLANTOCCIPITAL ANTERIOR",
+          "aliases": [
+            "MEMBRANA ATLANTOCCIPITAL ANTERIOR"
+          ]
+        },
+        {
+          "id": "pin-mrba9j2w-jea3by",
+          "x": 0.7301587301587301,
+          "y": 0.40165800381604055,
+          "label": "DISCO ARTICULAR",
+          "aliases": [
+            "DISCO ARTICULAR"
+          ]
+        },
+        {
+          "id": "pin-mrba9k04-kclun2",
+          "x": 0.7813492063492063,
+          "y": 0.4347829901089984,
+          "label": "LIG. ESTILO MANDIBULAR",
+          "aliases": [
+            "LIG. ESTILO MANDIBULAR"
+          ]
+        },
+        {
+          "id": "pin-mrba9lpy-tgf074",
+          "x": 0.13690476190476192,
+          "y": 0.5074895278198127,
+          "label": "TEMPORAL",
+          "aliases": [
+            "TEMPORAL"
+          ]
+        },
+        {
+          "id": "pin-mrba9o12-yhsfp7",
+          "x": 0.16706349206349205,
+          "y": 0.5218062591837183,
+          "label": "DISCO ARTICULAR",
+          "aliases": [
+            "DISCO ARTICULAR"
+          ]
+        },
+        {
+          "id": "pin-mrba9pdm-y5of81",
+          "x": 0.1761904761904762,
+          "y": 0.5164725749501063,
+          "label": "CÂMERA SUPERIOR DO DISCO ARTICULAR",
+          "aliases": [
+            "CÂMERA SUPERIOR DO DISCO ARTICULAR"
+          ]
+        },
+        {
+          "id": "pin-mrba9q3e-8g8prk",
+          "x": 0.17539682539682538,
+          "y": 0.52377130074347,
+          "label": "CÂMERA INFERIOR DO DISCO ARTICULAR",
+          "aliases": [
+            "CÂMERA INFERIOR DO DISCO ARTICULAR"
+          ]
+        },
+        {
+          "id": "pin-mrba9qye-zivvf7",
+          "x": 0.19444444444444445,
+          "y": 0.535000109656337,
+          "label": "MANDÍBULA",
+          "aliases": [
+            "MANDÍBULA"
+          ]
+        },
+        {
+          "id": "pin-mrba9uf6-1n8fjj",
+          "x": 0.2754285830543155,
+          "y": 0.8548281335724832,
+          "label": "ATLAS",
+          "aliases": [
+            "ATLAS"
+          ]
+        },
+        {
+          "id": "pin-mrba9v0a-2y2w8l",
+          "x": 0.26780953543526786,
+          "y": 0.8736925620237087,
+          "label": "ART. ATLANTOAXIAL MEDIANA",
+          "aliases": [
+            "ART. ATLANTOAXIAL MEDIANA"
+          ]
+        },
+        {
+          "id": "pin-mrba9vlm-3joq1q",
+          "x": 0.23293650793650794,
+          "y": 0.8780402219444262,
+          "label": "DENTE DO ÁXIS",
+          "aliases": [
+            "DENTE DO ÁXIS"
+          ]
+        },
+        {
+          "id": "pin-mrba9xi1-hh17yr",
+          "x": 0.29980954124813985,
+          "y": 0.9049536313342157,
+          "label": "M. LONGO DA CABEÇA",
+          "aliases": [
+            "M. LONGO DA CABEÇA"
+          ]
+        },
+        {
+          "id": "pin-mrba9yc8-1h3zx5",
+          "x": 0.2716190592447917,
+          "y": 0.9583129817707294,
+          "label": "M. LONGO DO PESCOÇO",
+          "aliases": [
+            "M. LONGO DO PESCOÇO"
+          ]
+        },
+        {
+          "id": "pin-mrba9zt2-083m4t",
+          "x": 0.20238095238095238,
+          "y": 0.8620391692435906,
+          "label": "MEDULA ESPINHAL",
+          "aliases": [
+            "MEDULA ESPINHAL"
+          ]
+        }
+      ],
+      "masks": []
+    },
+    {
+      "pins": [
+        {
+          "id": "pin-mrbavh87-75aw6r",
+          "x": 0.2687074829931973,
+          "y": 0.7386063718597499,
+          "label": "A. TEMPORAL SUPERFICIAL",
+          "aliases": [
+            "A. TEMPORAL SUPERFICIAL"
+          ]
+        },
+        {
+          "id": "pin-mrbavrth-ls6073",
+          "x": 0.24829931972789115,
+          "y": 0.7713303907783233,
+          "label": "A. MENÍNGEA MÉDIA",
+          "aliases": [
+            "A. MENÍNGEA MÉDIA"
+          ]
+        },
+        {
+          "id": "pin-mrbavssx-yctxdt",
+          "x": 0.2829931972789116,
+          "y": 0.7771052176463069,
+          "label": "A. MAXILAR",
+          "aliases": [
+            "A. MAXILAR"
+          ]
+        },
+        {
+          "id": "pin-mrbavtqr-k3utuu",
+          "x": 0.23129251700680273,
+          "y": 0.8112729432818763,
+          "label": "A. ALVEOLAR INFERIOR",
+          "aliases": [
+            "A. ALVEOLAR INFERIOR"
+          ]
+        },
+        {
+          "id": "pin-mrbavv5g-8d3u6r",
+          "x": 0.21564625850340136,
+          "y": 0.8584340293704085,
+          "label": "A. CORÓTIDA EXTERNA",
+          "aliases": [
+            "A. CORÓTIDA EXTERNA"
+          ]
+        },
+        {
+          "id": "pin-mrbavvuc-3pd4ha",
+          "x": 0.18027210884353742,
+          "y": 0.8473656112067733,
+          "label": "A. CARÓTIDA INTERNA",
+          "aliases": [
+            "A. CARÓTIDA INTERNA"
+          ]
+        },
+        {
+          "id": "pin-mrbavwrt-byqw4j",
+          "x": 0.20680272108843537,
+          "y": 0.8911580482889819,
+          "label": "A. TIREOIDEA SUPERIOR",
+          "aliases": [
+            "A. TIREOIDEA SUPERIOR"
+          ]
+        },
+        {
+          "id": "pin-mrbavxlj-1j4gmp",
+          "x": 0.22312925170068026,
+          "y": 0.9137761201885842,
+          "label": "A. CARÓTIDA COMUM",
+          "aliases": [
+            "A. CARÓTIDA COMUM"
+          ]
+        },
+        {
+          "id": "pin-mrbavyqf-cfoel7",
+          "x": 0.2904761904761905,
+          "y": 0.8584340293704085,
+          "label": "A. FACIAL",
+          "aliases": [
+            "A. FACIAL"
+          ]
+        },
+        {
+          "id": "pin-mrbaw0a7-igdkpa",
+          "x": 0.23605442176870747,
+          "y": 0.8603589716597364,
+          "label": "A. LINGUAL",
+          "aliases": [
+            "A. LINGUAL"
+          ]
+        }
+      ],
+      "masks": [
+        {
+          "id": "mask-mrbaus8x-7yjb9p",
+          "x": 0.0033333333333333335,
+          "y": 0.010653416567536555,
+          "w": 0.9966666666666667,
+          "h": 0.4844146410788163
+        },
+        {
+          "id": "mask-mrbav4t6-dw6x08",
+          "x": 0,
+          "y": 0.45666522796416575,
+          "w": 0.9814285714285714,
+          "h": 0.11588222290063477
+        }
+      ]
+    },
+    {
+      "pins": [
+        {
+          "id": "pin-mrbb19pf-g63l5j",
+          "x": 0.48134920634920636,
+          "y": 0.16725661775994036,
+          "label": "RAMO PARIETAL",
+          "aliases": [
+            "RAMO PARIETAL"
+          ]
+        },
+        {
+          "id": "pin-mrbb1acq-owggjq",
+          "x": 0.4365079365079365,
+          "y": 0.18802991424874443,
+          "label": "RAMO FRONTAL",
+          "aliases": [
+            "RAMO FRONTAL"
+          ]
+        },
+        {
+          "id": "pin-mrbb1ba6-es34p7",
+          "x": 0.4912087912087912,
+          "y": 0.2523402325656723,
+          "label": "A. TEMPORAL SUPERFICIAL",
+          "aliases": [
+            "A. TEMPORAL SUPERFICIAL"
+          ]
+        },
+        {
+          "id": "pin-mrbb1bww-rmzw1c",
+          "x": 0.43956043956043955,
+          "y": 0.24456644964856022,
+          "label": "A. MAXILAR",
+          "aliases": [
+            "A. MAXILAR"
+          ]
+        },
+        {
+          "id": "pin-mrbb1cd4-saz355",
+          "x": 0.49523809523809526,
+          "y": 0.2967010381628878,
+          "label": "A. OCCIPITAL",
+          "aliases": [
+            "A. OCCIPITAL"
+          ]
+        },
+        {
+          "id": "pin-mrbb1dh2-un3al3",
+          "x": 0.5234432234432235,
+          "y": 0.32619117027823663,
+          "label": "A. CARÓTIDA INTERNA",
+          "aliases": [
+            "A. CARÓTIDA INTERNA"
+          ]
+        },
+        {
+          "id": "pin-mrbb1e3y-gvggf1",
+          "x": 0.49727891156462584,
+          "y": 0.32714995751592213,
+          "label": "A. CARÓTIDA EXTERNA",
+          "aliases": [
+            "A. CARÓTIDA EXTERNA"
+          ]
+        },
+        {
+          "id": "pin-mrbb1fia-2f0aqc",
+          "x": 0.5029478458049886,
+          "y": 0.3945520259465529,
+          "label": "A. CARÓTIDA COMUM",
+          "aliases": [
+            "A. CARÓTIDA COMUM"
+          ]
+        },
+        {
+          "id": "pin-mrbb1gcy-xnxwu5",
+          "x": 0.3442176870748299,
+          "y": 0.3483535267962323,
+          "label": "A. SUBMENTUAL",
+          "aliases": [
+            "A. SUBMENTUAL"
+          ]
+        },
+        {
+          "id": "pin-mrbb1i74-i7f4qu",
+          "x": 0.3165532879818594,
+          "y": 0.3088923087720002,
+          "label": "A. LABIAL INFERIOR",
+          "aliases": [
+            "A. LABIAL INFERIOR"
+          ]
+        },
+        {
+          "id": "pin-mrbb1lbs-2074ep",
+          "x": 0.3129251700680272,
+          "y": 0.2796974238922837,
+          "label": "A. LABIAL SUPERIOR",
+          "aliases": [
+            "A. LABIAL SUPERIOR"
+          ]
+        },
+        {
+          "id": "pin-mrbb1npy-55hg9g",
+          "x": 0.3064935064935065,
+          "y": 0.21547854880231213,
+          "label": "A. NASAL",
+          "aliases": [
+            "A. NASAL"
+          ]
+        },
+        {
+          "id": "pin-mrbb1p4o-t9zatu",
+          "x": 0.3229437229437229,
+          "y": 0.20139148076904673,
+          "label": "A. ANGULAR",
+          "aliases": [
+            "A. ANGULAR"
+          ]
+        },
+        {
+          "id": "pin-mrbb1tke-rweazu",
+          "x": 0.48,
+          "y": 0.5631553091445014,
+          "label": "RAMO PARIETAL",
+          "aliases": [
+            "RAMO PARIETAL"
+          ]
+        },
+        {
+          "id": "pin-mrbb1w5x-ibpg87",
+          "x": 0.4444444444444444,
+          "y": 0.5910028773949049,
+          "label": "RAMO FRONTAL DA A. TEMPORAL SUPERFICIAL",
+          "aliases": [
+            "RAMO FRONTAL DA A. TEMPORAL SUPERFICIAL"
+          ]
+        },
+        {
+          "id": "pin-mrbb1zja-poriqs",
+          "x": 0.44242424242424244,
+          "y": 0.6727531987788655,
+          "label": "A. MAXILAR",
+          "aliases": [
+            "A. MAXILAR"
+          ]
+        },
+        {
+          "id": "pin-mrbb20us-wjtrgh",
+          "x": 0.6054421768707483,
+          "y": 0.6409155506763615,
+          "label": "SULCO DA V. AURICULAR POSTERIOR",
+          "aliases": [
+            "SULCO DA V. AURICULAR POSTERIOR"
+          ]
+        },
+        {
+          "id": "pin-mrbb22b0-krd8ee",
+          "x": 0.3217687074829932,
+          "y": 0.7082885308028363,
+          "label": "",
+          "aliases": []
+        },
+        {
+          "id": "pin-mrbb25ka-sp3x2h",
+          "x": 0.5265306122448979,
+          "y": 0.724650540262123,
+          "label": "LN. PAROTÍDEO",
+          "aliases": [
+            "LN. PAROTÍDEO"
+          ]
+        },
+        {
+          "id": "pin-mrbb26sk-dzvszk",
+          "x": 0.4959183673469388,
+          "y": 0.7429374920107376,
+          "label": "V. JUGULAR INTERNA",
+          "aliases": [
+            "V. JUGULAR INTERNA"
+          ]
+        },
+        {
+          "id": "pin-mrbb294e-8ai71t",
+          "x": 0.4510822510822511,
+          "y": 0.794636961327553,
+          "label": "GLÂNDULA SUBMANDIBULAR",
+          "aliases": [
+            "GLÂNDULA SUBMANDIBULAR"
+          ]
+        },
+        {
+          "id": "pin-mrbb2asc-8e90vv",
+          "x": 0.40816326530612246,
+          "y": 0.7900985780992699,
+          "label": "LN. SUBMANDIBULAR",
+          "aliases": [
+            "LN. SUBMANDIBULAR"
+          ]
+        },
+        {
+          "id": "pin-mrbb2bv0-8va15b",
+          "x": 0.401984126984127,
+          "y": 0.7567197698084076,
+          "label": "LN. SUBMANDIBULAR",
+          "aliases": [
+            "LN. SUBMANDIBULAR"
+          ]
+        },
+        {
+          "id": "pin-mrbb2dg3-yblh3e",
+          "x": 0.5578231292517006,
+          "y": 0.7823988089419585,
+          "label": "V. JUGULAR INTERNA",
+          "aliases": [
+            "V. JUGULAR INTERNA"
+          ]
+        },
+        {
+          "id": "pin-mrbb2e4y-jhyiiv",
+          "x": 0.5469387755102041,
+          "y": 0.7655555639103397,
+          "label": "LN. JUGULODIGÁSTRICO",
+          "aliases": [
+            "LN. JUGULODIGÁSTRICO"
+          ]
+        },
+        {
+          "id": "pin-mrbb2ew3-f3uzld",
+          "x": 0.5043290043290043,
+          "y": 0.7860622242638263,
+          "label": "A. CARÓTIDA EXTERNA",
+          "aliases": [
+            "A. CARÓTIDA EXTERNA"
+          ]
+        },
+        {
+          "id": "pin-mrbb2g15-yidpft",
+          "x": 0.5163265306122449,
+          "y": 0.8002045251182411,
+          "label": "A. CARÓTIDA INTERNA",
+          "aliases": [
+            "A. CARÓTIDA INTERNA"
+          ]
+        },
+        {
+          "id": "pin-mrbb2h2q-w10ohy",
+          "x": 0.5541125541125541,
+          "y": 0.8255672628788532,
+          "label": "N. VAGO",
+          "aliases": [
+            "N. VAGO"
+          ]
+        },
+        {
+          "id": "pin-mrbb2i0i-6oy9nf",
+          "x": 0.4779220779220779,
+          "y": 0.8402668121309561,
+          "label": "A. TIREOIDEA SUPERIOR",
+          "aliases": [
+            "A. TIREOIDEA SUPERIOR"
+          ]
+        },
+        {
+          "id": "pin-mrbb2itz-n24mpj",
+          "x": 0.5061224489795918,
+          "y": 0.8728710965403674,
+          "label": "A. CARÓTIDA COMUM",
+          "aliases": [
+            "A. CARÓTIDA COMUM"
+          ]
+        },
+        {
+          "id": "pin-mrbb2msa-dp50mc",
+          "x": 0.4857142857142857,
+          "y": 0.7607432081870201,
+          "label": "TRONCO COMUM DA V. FACIAL",
+          "aliases": [
+            "TRONCO COMUM DA V. FACIAL"
+          ]
+        },
+        {
+          "id": "pin-mrbb35oo-k9nqff",
+          "x": 0.5099206349206349,
+          "y": 0.7207874236788546,
+          "label": "VENTRE POSTERIOR DO M. DIGÁSTRICO",
+          "aliases": [
+            "VENTRE POSTERIOR DO M. DIGÁSTRICO"
+          ]
+        }
+      ],
+      "masks": [
+        {
+          "id": "mask-mrbbo89m-9ypbo4",
+          "x": 0.7204761904761905,
+          "y": 0.0935226806185719,
+          "w": 0.2561904761904762,
+          "h": 0.2843156864189993
+        },
+        {
+          "id": "mask-mrbbo9tg-dmpam6",
+          "x": 0.06619047619047619,
+          "y": 0.12114576863558367,
+          "w": 0.16476190476190478,
+          "h": 0.2795995494404851
+        },
+        {
+          "id": "mask-mrbbob5s-s5lle6",
+          "x": 0.22333333333333333,
+          "y": 0.4398218816123293,
+          "w": 0.5209523809523811,
+          "h": 0.04311896666070131
+        },
+        {
+          "id": "mask-mrbboho8-fevlfn",
+          "x": 0.7433333333333333,
+          "y": 0.4964155253544998,
+          "w": 0.2566666666666667,
+          "h": 0.45072794837514346
+        },
+        {
+          "id": "mask-mrbbol5w-n21ki4",
+          "x": 0.18333333333333332,
+          "y": 0.8831387575926647,
+          "w": 0.5704761904761905,
+          "h": 0.09432273957028414
+        },
+        {
+          "id": "mask-mrbbon5y-bj82v8",
+          "x": 0.03,
+          "y": 0.5354920888907604,
+          "w": 0.19238095238095237,
+          "h": 0.21828976871980044
+        },
+        {
+          "id": "mask-mrbbopde-wjegw0",
+          "x": 0.5519047619047619,
+          "y": 0.8548419357215795,
+          "w": 0.14857142857142858,
+          "h": 0.030318023433305585
+        }
+      ]
+    },
+    {
+      "pins": [],
+      "masks": []
+    },
+    {
+      "pins": [],
+      "masks": []
+    },
+    {
+      "pins": [],
+      "masks": []
+    },
+    {
+      "pins": [],
+      "masks": []
+    },
+    {
+      "pins": [],
+      "masks": []
+    },
+    {
+      "pins": [],
+      "masks": []
+    },
+    {
+      "pins": [],
+      "masks": []
+    },
+    {
+      "pins": [],
+      "masks": []
+    },
+    {
+      "pins": [],
+      "masks": []
+    }
+  ]
+}

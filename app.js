@@ -1,5 +1,6 @@
 const SLIDE_COUNT = 13;
 const STORAGE_KEY = "cabeca-pescoco-quiz-v1";
+const DEFAULT_DATA_URL = "data/quiz-cabeca-pescoco.json";
 const MIN_ZOOM = 1;
 const MAX_ZOOM = 3;
 const ZOOM_STEP = 0.1;
@@ -57,34 +58,56 @@ const state = {
   zoom: 1,
 };
 
-let data = loadData();
+let data = createEmptyData();
 
 function emptySlideData() {
   return { pins: [], masks: [] };
 }
 
-function loadData() {
-  const fallback = {
+function createEmptyData() {
+  return {
     version: 1,
     slides: slides.map(() => emptySlideData()),
   };
+}
 
+function normalizeQuizData(source) {
+  const fallback = createEmptyData();
+  if (!source?.slides) return fallback;
+
+  return {
+    ...fallback,
+    ...source,
+    slides: slides.map((_, index) => ({
+      ...emptySlideData(),
+      ...(source.slides[index] || {}),
+      pins: source.slides[index]?.pins || [],
+      masks: source.slides[index]?.masks || [],
+    })),
+  };
+}
+
+function loadSavedData() {
   try {
     const saved = JSON.parse(localStorage.getItem(STORAGE_KEY));
-    if (!saved?.slides) return fallback;
-    return {
-      ...fallback,
-      ...saved,
-      slides: slides.map((_, index) => ({
-        ...emptySlideData(),
-        ...(saved.slides[index] || {}),
-        pins: saved.slides[index]?.pins || [],
-        masks: saved.slides[index]?.masks || [],
-      })),
-    };
+    return saved?.slides ? normalizeQuizData(saved) : null;
   } catch {
-    return fallback;
+    return null;
   }
+}
+
+async function loadDefaultData() {
+  try {
+    const response = await fetch(DEFAULT_DATA_URL, { cache: "no-cache" });
+    if (!response.ok) throw new Error("Dados padrão indisponíveis");
+    return normalizeQuizData(await response.json());
+  } catch {
+    return createEmptyData();
+  }
+}
+
+async function loadData() {
+  return loadSavedData() || await loadDefaultData();
 }
 
 function saveData() {
@@ -634,13 +657,7 @@ async function importData(event) {
   try {
     const imported = JSON.parse(await file.text());
     if (!imported?.slides) throw new Error("JSON inválido");
-    data = {
-      version: 1,
-      slides: slides.map((_, index) => ({
-        ...emptySlideData(),
-        ...(imported.slides[index] || {}),
-      })),
-    };
+    data = normalizeQuizData(imported);
     saveData();
     state.selectedId = null;
     state.quizIndex = 0;
@@ -652,7 +669,9 @@ async function importData(event) {
   }
 }
 
-function init() {
+async function init() {
+  data = await loadData();
+
   slides.forEach((slide, index) => {
     const option = document.createElement("option");
     option.value = String(index);
